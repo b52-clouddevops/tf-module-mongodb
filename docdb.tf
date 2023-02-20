@@ -1,3 +1,5 @@
+# This block provisions document db on aws 
+
 resource "aws_docdb_cluster" "docdb" {
   cluster_identifier      = "my-docdb-cluster"
   engine                  = "docdb"
