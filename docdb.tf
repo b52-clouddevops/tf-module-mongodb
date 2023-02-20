@@ -1,7 +1,7 @@
 # This block provisions document db on aws 
 
 resource "aws_docdb_cluster" "docdb" {
-  cluster_identifier      = "roboshop-docdb-${var.ENV"
+  cluster_identifier      = "roboshop--${var.ENV}-docdb"
   engine                  = "docdb"
   master_username         = "foo"
   master_password         = "mustbeeightchars"
