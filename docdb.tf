@@ -13,7 +13,7 @@ resource "aws_docdb_cluster" "docdb" {
 # Creates Subnet Group 
 
 resource "aws_docdb_subnet_group" "docdb" {
-  name       = "main"
+  name       = "roboshop-${var.ENV}-"
   subnet_ids = [aws_subnet.frontend.id, aws_subnet.backend.id]
 
   tags = {
