@@ -28,3 +28,5 @@ resource "aws_docdb_cluster_instance" "cluster_instances" {
   cluster_identifier = aws_docdb_cluster.docdb.id
   instance_class     = "db.t3.medium"
 }
+
+# Our application is not designed to 
