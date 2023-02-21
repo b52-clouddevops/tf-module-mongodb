@@ -32,4 +32,4 @@ resource "aws_docdb_cluster_instance" "cluster_instances" {
 # Our application is not designed to work with Document DB. That's because of the fact that AWS don't let youto create Document DB without Username and password
 # Out cart and catalogue code is not designed to talk to mongodb with credentials.
 
-# Let's try to understand, how can we connect t
+# Let's try to understand, how can we connect to connect to doc-db. Based on that we can apply that strategy.
