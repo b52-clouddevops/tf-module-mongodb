@@ -27,6 +27,6 @@ resource "aws_security_group" "allow_mongodb" {
   }
 
   tags = {
-    Name = "allow_ssh_sg"
+    Name = "roboshop-${var.ENV}-mongodb-sg"
   }
 }
