@@ -14,7 +14,7 @@
 
 resource "aws_docdb_subnet_group" "docdb" {
   name       = "roboshop-${var.ENV}-docdb-subnet-grp"
-  subnet_ids = 
+  subnet_ids = data.terraform_remote_state.vpc.outputs
 
   tags = {
     Name = "My docdb subnet group"
