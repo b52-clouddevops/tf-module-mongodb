@@ -5,10 +5,10 @@ resource "aws_security_group" "allow_mongodb" {
 
   ingress {
     description = "Allow DOCDB From Local Network"
-    from_port   = 22
-    to_port     = 22
+    from_port   = 27017
+    to_port     = 27017
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]   # [] represent's list. 
+    cidr_blocks = [""]   # [] represent's list. 
   }
 
   ingress {
