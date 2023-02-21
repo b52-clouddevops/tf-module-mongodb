@@ -8,7 +8,7 @@ resource "aws_security_group" "allow_mongodb" {
     from_port   = 27017
     to_port     = 27017
     protocol    = "tcp"
-    cidr_blocks = []   # [] represent's list. 
+    cidr_blocks = [data.terraform_remote_state.vpc.outputs.]   # [] represent's list. 
   }
 
   ingress {
