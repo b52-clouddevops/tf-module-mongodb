@@ -1,6 +1,6 @@
 # Creates Security Group
 resource "aws_security_group" "allow_mongodb" {
-  name        = "roboshop-${var.ENV}"
+  name        = "roboshop-${var.ENV}-mongodb-sg"
   description = "Allow SSH inbound traffic"
 
   ingress {
