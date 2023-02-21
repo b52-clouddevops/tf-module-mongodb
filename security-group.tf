@@ -4,7 +4,7 @@ resource "aws_security_group" "allow_mongodb" {
   description = "Allow 27017 inbound traffic from intranet only"
 
   ingress {
-    description = "SSH from Public"
+    description = "Allow DOCDB From Local Network"
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
