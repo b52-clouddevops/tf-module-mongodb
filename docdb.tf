@@ -21,4 +21,4 @@ resource "aws_docdb_subnet_group" "docdb" {
   }
 }
 
-# PRovisio
+# Provision the nodes needed for doc-db and add them to the docdb cluster.
