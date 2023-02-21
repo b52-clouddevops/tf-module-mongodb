@@ -29,4 +29,4 @@ resource "aws_docdb_cluster_instance" "cluster_instances" {
   instance_class     = "db.t3.medium"
 }
 
-# Our application is not designed to 
+# Our application is not designed to work with Document DB. T
