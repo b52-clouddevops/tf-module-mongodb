@@ -5,7 +5,7 @@ resource "aws_docdb_cluster" "docdb" {
   engine                  = "docdb"
   master_username         = "admin1"
   master_password         = "roboshop1"
-  db_subnet_group_name    = 
+  db_subnet_group_name    = aws_docdb_subnet_group.docdb.
 #   backup_retention_period = 5                        Uncomment only when you need backups
 #   preferred_backup_window = "07:00-09:00"
 #   skip_final_snapshot     = true
