@@ -5,7 +5,7 @@ resource "aws_docdb_cluster" "docdb" {
   engine                  = "docdb"
   master_username         = "admin1"
   master_password         = "roboshop1"
-  
+  vpc_security_group_ids  = 
   db_subnet_group_name    = aws_docdb_subnet_group.docdb.id
 #   backup_retention_period = 5                        Uncomment only when you need backups
 #   preferred_backup_window = "07:00-09:00"
