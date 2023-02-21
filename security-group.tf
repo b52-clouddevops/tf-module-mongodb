@@ -12,9 +12,9 @@ resource "aws_security_group" "allow_mongodb" {
   }
 
   ingress {
-    description = "HTTP from Public"
-    from_port   = 80
-    to_port     = 80
+    description = "Allow DOCDB From Default VPC Network"
+    from_port   = 27017
+    to_port     = 27017
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]   # [] represent's list. 
   }
