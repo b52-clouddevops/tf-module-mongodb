@@ -1,4 +1,4 @@
-# This block provisions document db on aws 
+# This block provisions document db cluster on aws 
 
 resource "aws_docdb_cluster" "docdb" {
   cluster_identifier      = "roboshop-${var.ENV}-docdb"
