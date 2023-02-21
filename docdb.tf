@@ -29,4 +29,5 @@ resource "aws_docdb_cluster_instance" "cluster_instances" {
   instance_class     = "db.t3.medium"
 }
 
-# Our application is not designed to work with Document DB. T
+# Our application is not designed to work with Document DB. That's because of the fact that AWS don't let youto create Document DB without Username and password
+# Out cart and catalogue code is not designed to talk to mongodb with credentials.
