@@ -9,6 +9,8 @@ resource "null_resource" "docdb-schema" {
 curl -s -L -o /tmp/mongodb.zip "https://github.com/stans-robot-project/mongodb/archive/main.zip"
 unzip -o mongodb.zip
 cd mongodb-main
+wget https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
+
 mongo < catalogue.js
         EOF
   }  
