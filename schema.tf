@@ -11,7 +11,7 @@ resource "null_resource" "docdb-schema" {
         cd mongodb-main
         wget https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
 mongo --ssl --host ${aws_docdb_cluster.docdb.endpoint}:27017 --sslCAFile /tmp/rds-combined-ca-bundle.pem --username admin1 --password roboshop1 < catalogue.js 
-        mongo < catalogue.js
+mongo --ssl --host ${aws_docdb_cluster.docdb.endpoint}:27017 --sslCAFile /tmp/rds-combined-ca-bundle.pem --username admin1 --password roboshop1 < users.js 
         EOF
     }  
 }
