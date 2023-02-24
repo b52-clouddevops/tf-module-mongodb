@@ -7,4 +7,5 @@ resource "aws_route53_record" "www" {
   records = [aws_eip.lb.public_ip]
 }
 
-# The scope of a Route53 Zone is by default 
+# The scope of a Route53 Zone is by default works in the default-vpc
+# If you want DNS Resoutions should work in a specific VPC-x
