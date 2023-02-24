@@ -6,3 +6,5 @@ resource "aws_route53_record" "www" {
   ttl     = 300
   records = [aws_eip.lb.public_ip]
 }
+
+# The scope of a Route53 Zone is by default 
