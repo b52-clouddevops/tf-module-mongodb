@@ -1,7 +1,7 @@
 
 # Creates CNAME record for the docdb endpoint.
 resource "aws_route53_record" "record" {
-  zone_id = data.terraform_remote_state.vpc.outputs.PRIVATE_SUBNET_IDS
+  zone_id = data.terraform_remote_state.vpc.outputs.PRIVATE_HOSTEDZONE_ID
   name    = "www.example.com"
   type    = "A"
   ttl     = 300
