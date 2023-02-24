@@ -6,16 +6,16 @@ resource "aws_security_group" "allow_mongodb" {
 
   ingress {
     description = "Allow DOCDB From Local Network"
-    from_port   = var.DOCDB_MYSQL_PORT
-    to_port     = var.DOCDB_MYSQL_PORT
+    from_port   = var.DOCDB_PORT
+    to_port     = var.DOCDB_PORT
     protocol    = "tcp"
     cidr_blocks = [data.terraform_remote_state.vpc.outputs.VPC_CIDR]   # [] represent's list. 
   }
 
   ingress {
     description = "Allow DOCDB From Default VPC Network"
-    from_port   = var.DOCDB_MYSQL_PORT
-    to_port     = var.DOCDB_MYSQL_PORT
+    from_port   = var.DOCDB_PORT
+    to_port     = var.DOCDB_PORT
     protocol    = "tcp"
     cidr_blocks = [data.terraform_remote_state.vpc.outputs.DEFAULT_VPC_CIDR]   # [] represent's list. 
   }
