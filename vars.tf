@@ -1,4 +1,4 @@
 variable "ENV" {}
 varibale "DOCDB_PORT" {}
-variable "DOCDB_INSTACE_CLASS" {}
-variable "DOCDB_INSTACE_COUNT" {}
+variable "DOCDB_INSTANCE_CLASS" {}
+variable "DOCDB_INSTANCE_COUNT" {}
