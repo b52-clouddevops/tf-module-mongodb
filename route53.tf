@@ -5,7 +5,7 @@ resource "aws_route53_record" "record" {
   name    = "mongodb-${var.ENV}.${data.terraform_remote_state.vpc.outputs.PRIVATE_HOSTEDZONE_NAME}"
   type    = "CNAME"
   ttl     = 10
-  records = []
+  records = [endpoint]
 }
 
 # The scope of a Route53 Zone is by default works in the default-vpc
