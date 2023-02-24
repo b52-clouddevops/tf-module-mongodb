@@ -27,7 +27,7 @@ resource "aws_docdb_cluster_instance" "cluster_instances" {
   count              = 1
   identifier         = "roboshop-${var.ENV}-docdb-nodes"
   cluster_identifier = aws_docdb_cluster.docdb.id
-  instance_class     = "db.t3.medium"
+  instance_class     = var.DOCDB_INSTACE_CLASS
 }
 
 # Our application is not designed to work with Document DB. That's because of the fact that AWS don't let youto create Document DB without Username and password
