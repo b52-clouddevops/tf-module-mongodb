@@ -1,7 +1,7 @@
 
 # Creates CNAME record for the docdb endpoint.
-resource "aws_route53_record" "www" {
-  zone_id = aws_route53_zone.primary.zone_id
+resource "aws_route53_record" "record" {
+  zone_id = 
   name    = "www.example.com"
   type    = "A"
   ttl     = 300
