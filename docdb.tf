@@ -30,7 +30,7 @@ resource "aws_docdb_cluster_instance" "cluster_instances" {
   instance_class     = var.DOCDB_INSTANCE_CLASS
 
   depends_on = [
-    aws_iam_role_policy.example
+    aws_docdb_cluster.docdb
   ]
 }
 
