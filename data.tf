@@ -10,5 +10,7 @@ data "terraform_remote_state" "vpc" {
 
 # fetching the metadata of the secret
 data "aws_secretsmanager_secret" "secrets" {
-  name = "${var.ENV}/"
+  name = "robotshop/secrets"
 }
+
+output 
