@@ -16,5 +16,3 @@ data "aws_secretsmanager_secret" "secrets" {
 output "secret-data" {
   value = data.aws_secretsmanager_secret.secrets
 }
-
-output "secret-data"
