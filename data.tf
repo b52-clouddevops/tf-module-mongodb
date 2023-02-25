@@ -13,10 +13,6 @@ data "aws_secretsmanager_secret" "secrets" {
   name = "robotshop/secrets"
 }
 
-output "secret-data" {
-  value = data.aws_secretsmanager_secret.secrets
-}
-
 data "aws_secretsmanager_secret_version" "secrets" {
   secret_id = data.aws_secretsmanager_secret.secrets.id
 }
