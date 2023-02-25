@@ -3,8 +3,8 @@
 resource "aws_docdb_cluster" "docdb" {
   cluster_identifier      = "roboshop-${var.ENV}-docdb"
   engine                  = "docdb"
-  master_username         = 
-  master_password         = jsondecode(data.aws_secretsmanager_secret_version.secrets.secret_string)["DOCDB_PASSWORD"]
+  master_username         = local.DOCDB_USER
+  master_password         = 
   vpc_security_group_ids  = [aws_security_group.allow_mongodb.id]
   db_subnet_group_name    = aws_docdb_subnet_group.docdb.id
 #   backup_retention_period = 5                        Uncomment only when you need backups
