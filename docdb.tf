@@ -3,7 +3,7 @@
 resource "aws_docdb_cluster" "docdb" {
   cluster_identifier      = "roboshop-${var.ENV}-docdb"
   engine                  = "docdb"
-  master_username         = jsondecode(data.aws_secretsmanager_secret_version.secrets.secret_string)["DOCDB_USERNAME"]
+  master_username         = 
   master_password         = jsondecode(data.aws_secretsmanager_secret_version.secrets.secret_string)["DOCDB_PASSWORD"]
   vpc_security_group_ids  = [aws_security_group.allow_mongodb.id]
   db_subnet_group_name    = aws_docdb_subnet_group.docdb.id
