@@ -18,5 +18,5 @@ data "aws_secretsmanager_secret_version" "secrets" {
 }
 
 output "data" {
-  value  =  jsondecode(data.aws_secretsmanager_secret_version.example.secret_string)["key1"]
+  value  =  jsondecode(data.aws_secretsmanager_secret_version.secrets.secret_string)[""]
 }
