@@ -18,5 +18,5 @@ output "secret-data" {
 }
 
 data "aws_secretsmanager_secret_version" "secrets" {
-  secret_id = data.aws_secretsmanager_secret.example.id
+  secret_id = data.aws_secretsmanager_secret.secrets.id
 }
